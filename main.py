@@ -16,20 +16,7 @@ import json,pymongo
 import schemas
 from mongoengine import DateField
 from bson import ObjectId
-# def serializeDict(item)->dict:
-#     return {
-#         "id":str(item["_id"]),
-#         "name":item["name"],
-#         "email":item["email"],
-#         "designation": item["designation"],
-#         "company_name": item["company_name"],
-#         "contact": item["contact"],
-#     "address":item["address"],
-#         "password":item["password"]
-#     }
-#
-# def serializeList(entity)->list:
-#     return [serializeDict(item) for item in entity]
+
 description = """
 _Online Job Portal helps to connect employers with candidates in order to meet their requirements and goals._
 
@@ -88,13 +75,6 @@ conn=connect(db="job_portal",host="localhost",port=27017)
 security=HTTPBasic()
 db=conn['job_portal']
 emp_coll=db['employers']
-# Dependency
-# def get_db():
-#     db = SessionLocal()
-#     try:
-#         yield db
-#     finally:
-#         db.close()
 
 def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
