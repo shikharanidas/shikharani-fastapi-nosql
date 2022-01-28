@@ -1,9 +1,3 @@
-# from datetime import datetime, date
-#
-# from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
-# from sqlalchemy.orm import relationship
-# import sqlalchemy
-# # from .database import Base
 import datetime
 
 import sqlalchemy
